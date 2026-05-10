@@ -1,0 +1,32 @@
+1. Usability Testing Design
+My goal is to make sure the "Car Search" is actually easy for a human to use, not just functional.
+
+What I would look at:
+Can a user find their car in under 3 clicks?
+If they click "Search," is it obvious that the page is loading, or does it look frozen?
+Helpfulness: If they search for something that doesn't exist, does the site give them a "No results found" message with suggestions, or just a blank white screen?
+
+Test Cases:
+Check if typing "VW" brings up "Volkswagen" (smart search).
+Make sure filters work together (e.g., searching for a "2022" "Audi" shouldn't show a "2010" "BMW").
+Testing on a mobile screen to ensure buttons aren't too small to tap.
+
+2. Performance Testing Strategy
+I want to make sure the site doesn't crash when 500 people try to search for cars at the same time.
+
+Tools: I would use k6 to simulate a crowd of users hitting the search button.
+Stress Test: I'll keep adding "virtual users" until the site starts to slow down or crash. This tells us exactly how much traffic we can handle.
+
+Success Criteria:
+Speed: Search results should show up in under 2 seconds.
+Stability: Even under heavy load, the site shouldn't throw "404" or "500" errors.
+
+3. Client Collaboration
+I would keep the business team in the loop throughout.
+
+How I would involve client:
+Before I start, I would ask the client which car brands are their top sellers so I can prioritize testing those specific search paths.
+
+Instead of sending a massive technical spreadsheet, I will send a "traffic light" report (Green = Good, Yellow = Slow, Red = Fix immediately).
+
+If the client says "our users are mostly on old phones," I wll pivot my testing to focus more on mobile performance rather than high-end desktops.
