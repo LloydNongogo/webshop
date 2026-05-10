@@ -1,0 +1,20 @@
+How to Set Up the Automated Pipeline
+
+The Trigger (The Start Button)
+I would set up a "Push Trigger." This means the second someone clicks "Commit" or "Merge" to the main branch, the pipeline automatically starts. No manual work is needed.
+
+Environment Setup (The Workstation)
+Since the code is running on a cloud server and not my laptop, I have to "build" the environment from scratch:
+Tell the server to use Linux.
+Install the software (like Node.js).
+Download the libraries needed to run the tests.
+
+Test Execution (The Work)
+The server runs a single command (like npm test).
+If the test passes, the pipeline keeps moving.
+If the test fails, the pipeline stops immediately and alerts the team so broken code doesn't reach the customers.
+
+Reporting (The Feedback)
+Once finished, the pipeline saves a Test Report.
+I would set it to save an HTML report as an "artifact" (a file you can download).
+It sends a Slack or Email notification saying "Success" or "Failed."
